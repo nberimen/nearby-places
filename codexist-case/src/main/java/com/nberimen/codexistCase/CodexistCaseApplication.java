@@ -1,4 +1,4 @@
-package com.nberimen.codexist_case;
+package com.nberimen.codexistCase;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

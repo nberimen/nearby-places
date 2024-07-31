@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: codexist-case
+  datasource:
+    url: jdbc:h2:mem:codexist-case
+    driverClassName: org.h2.Driver
+    username: codexist
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+server:
+  port: 8070

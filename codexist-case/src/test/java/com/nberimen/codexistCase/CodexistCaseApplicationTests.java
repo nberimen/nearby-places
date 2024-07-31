@@ -1,4 +1,4 @@
-package com.nberimen.codexist_case;
+package com.nberimen.codexistCase;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
