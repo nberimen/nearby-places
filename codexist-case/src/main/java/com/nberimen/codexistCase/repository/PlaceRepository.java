@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface PlaceRepository extends JpaRepository<Place, Long> {
-    List<Place> findByLongitudeAndLatitudeAndRadius(double longitude, double latitude, double radius);
+    List<Place> findByLatitudeBetweenAndLongitudeBetween(double latMin, double latMax, double lonMin, double lonMax);
 }
