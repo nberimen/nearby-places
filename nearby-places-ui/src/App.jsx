@@ -1,10 +1,8 @@
-import Map from './components/Map';
+import HomePage from './pages/HomePage';
 
 const App = () => {
- 
-
   return (
-    <div><Map/></div>
+    <div><HomePage/></div>
   )
 }
 
