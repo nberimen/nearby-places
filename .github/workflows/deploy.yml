@@ -21,22 +21,22 @@ jobs:
       with:
         java-version: 21
     - run: npm ci
-        worworking-directory: ./nearby-places-ui
+      worworking-directory: ./nearby-places-ui
     - run: npm run build --if-present
-        woworking-directory: ./nearby-places-ui
-        env:
-          REACT_APP_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+      woworking-directory: ./nearby-places-ui
+      env:
+        REACT_APP_GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
 
     - name: copy react to spring static resources
       run: |
         mkdir -p nearby-places/src/main/resources/static
         cp -a nearby-places-ui/dist/. nearby-places/src/main/resources/static/
 
-    -name: Build Spring
+    - name: Build Spring
       run: mvn -B package --file pom.xml
       woworking-directory: ./nearby-places
       env:
-          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
 
     - name: SFTP Deploy
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
