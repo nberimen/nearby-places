@@ -1,10 +1,10 @@
 spring:
   application:
-    name: codexist-case
+    name: nearby-place
   datasource:
-    url: jdbc:h2:mem:codexist-case
+    url: jdbc:h2:mem:nearby-place
     driverClassName: org.h2.Driver
-    username: codexist
+    username: nearby-place
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
